@@ -38,10 +38,11 @@
 <style scoped lang="scss">
     @use "../style/partials/mixin" as *;
     header {
-        height: calc(100px);
+        height: 100px;
         padding: 1rem;
         /* debug */
-        background-color: aquamarine;
+        background-color: white;            /*da cambiare*/
+        margin-bottom: 0;
         @include flex(row, space-between, center );
 
         /* image style */
