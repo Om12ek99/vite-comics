@@ -21,25 +21,33 @@
 
 <template>
     <header>
-        <div class="logo">
-            <img src="../assets/img/dc-logo.png" alt="">
+        <div class="container">
+            <div class="logo">
+                <img 
+                src="../assets/img/dc-logo.png" 
+                alt="Logo DC">
+            </div>
+                <div class="navbar">
+                    <ul>
+                        <li 
+                        v-for = "(CurListItem, index) in navArray"> 
+                            <a href="#">
+                            {{CurListItem}}
+                            </a>                    
+                        </li>
+                    </ul>
+                </div>
+        
         </div>
-        <div class="navbar">
-            <ul>
-                <li v-for = "(CurListItem, index) in navArray"> <a href="#">
-                    {{CurListItem}}
-                </a>                    
-                </li>
-            </ul>
-        </div>
+        
     </header>
 </template>
 
 <style scoped lang="scss">
     @use "../style/partials/mixin" as *;
-    header {
+    @use "../style/partials/variables" as *;
+    .container {
         height: 100px;
-        padding: 1rem;
         /* debug */
         background-color: white;            /*da cambiare*/
         margin-bottom: 0;

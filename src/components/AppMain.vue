@@ -9,19 +9,21 @@
 </script>
 
 <template>
+
+
   
-    <div class="content-section">
-        <h1> --> CONTENT GOES HERE <-- </h1>
-    </div>
+  <div class="content-section">
+    <div class="container">
+      <h1> --> CONTENT GOES HERE <-- </h1>
+    </div>  
+  </div>
+    
 </template>
 
 <style lang = "scss"> 
     @use "../style/partials/mixin" as *;
     .content-section {
-        height: 100px;
-        margin-top: 0;
-        display: inline-block;
-        width: 100%;
+        height: 100px;        
         /* debug */
         background-color: rgb(0, 0, 0);
         @include flex(row, flex-start, center);
