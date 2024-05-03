@@ -3,16 +3,44 @@
         data (){
             return {
                 navArray: [
-                    "CHARACTERS",
-                    "COMICS",
-                    "MOVIES",
-                    "TV",
-                    "GAMES",
-                    "COLLECTIBLES",
-                    "VIDEOS",
-                    "FANS",
-                    "NEWS",
-                    "SHOP"
+                    {
+                        title:"CHARACTERS",
+                        isActive: false,
+                    },
+                    {
+                        title:"COMICS",
+                        isActive: false,
+                    },
+                    {
+                        title:"MOVIES",
+                        isActive: false,
+                    },
+                    {
+                        title:"TV",
+                        isActive: false,
+                    },
+                    {
+                        title:"GAMES",
+                        isActive: false,
+                    },
+                    {
+                        title:"COLLECTIBLES",
+                        isActive: false,
+                    },
+                    {
+                        title:"FANS",
+                        isActive: false,
+                    },
+                    {
+                        title:"NEWS",
+                        isActive: false,
+                    },
+                    {
+                        title:"SHOP",
+                        isActive: false,
+                    },                   
+                    
+                    
                 ]
             }
         }
