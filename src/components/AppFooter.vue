@@ -137,8 +137,11 @@
                     <h1>DC COMICS</h1>
                     <ul>
                         <li 
-                        v-for="curLink in dcComicsArray">
-                            {{curLink.title}}
+                        v-for="curLink in dcComicsArray" 
+                        :class = "{active: curLink.isActive}"> 
+                            <a href="#">
+                                {{curLink.title}}
+                            </a>                            
                         </li>
                     </ul>
                 </div>
@@ -147,8 +150,11 @@
                     <h1>SHOP</h1>
                     <ul>
                         <li 
-                        v-for="curLink in shopArray">
-                            {{curLink.title}}
+                        v-for="curLink in shopArray" 
+                        :class = "{active: curLink.isActive}"> 
+                            <a href="#">
+                                {{curLink.title}}
+                            </a>                            
                         </li>
                     </ul>
                 </div>
@@ -159,19 +165,26 @@
                     <h1>DC</h1>
                     <ul>
                         <li 
-                        v-for="curLink in dcArray">
-                            {{curLink.title}}
+                        v-for="curLink in dcArray" 
+                        :class = "{active: curLink.isActive}"> 
+                            <a href="#">
+                                {{curLink.title}}
+                            </a>                            
                         </li>
                     </ul>
                 </div>
             </div>
+            <!-- third column -->
             <div class="col">
                 <div class="section">
                     <h1>SITES</h1>
                     <ul>
                         <li 
-                        v-for="curLink in sitesArray">
-                            {{curLink.title}}
+                        v-for="curLink in sitesArray" 
+                        :class = "{active: curLink.isActive}"> 
+                            <a href="#">
+                                {{curLink.title}}
+                            </a>                            
                         </li>
                     </ul>
                 </div>
