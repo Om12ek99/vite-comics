@@ -44,6 +44,7 @@
                 <li 
                 v-for = "CurImage in images">
                     <img :src="getImageUrl(CurImage.image)" alt="">
+                    <h4> {{CurImage.title}} </h4>
                 </li>
             </ul>
         </div>
@@ -53,9 +54,29 @@
 
 <style scoped lang="scss">
     @use "../style/partials/variables" as *;
+    @use "../style/partials/mixin" as *;
+
     section {
         background-color: $primary-color;
         padding: 3rem 0;
         color: $white;
+        
+        ul{
+            @include flex(row, space-evenly, center);
+            
+            li{
+                @include flex(row, space-evenly, center);
+                gap:0.5rem;
+            }
+            
+            img{
+            height:40px;
+        }
+        h4{
+            font-size:0.8rem;
+            font-weight:300;
+        }
+        }
+       
     }
 </style>
