@@ -127,15 +127,97 @@
 </script>
 
 <template>
+    <footer>
     <div class="container">
         <div class="links">
-            <div class="col"></div>
-            <div class="col"></div>
-            <div class="col"></div>
+            <!-- first column -->
+            <div class="col">
+                <!-- DC comics -->
+                <div class="section">
+                    <h1>DC COMICS</h1>
+                    <ul>
+                        <li 
+                        v-for="curLink in dcComicsArray">
+                            {{curLink.title}}
+                        </li>
+                    </ul>
+                </div>
+                <!-- Shop -->
+                <div class="section">
+                    <h1>SHOP</h1>
+                    <ul>
+                        <li 
+                        v-for="curLink in shopArray">
+                            {{curLink.title}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- second column -->
+            <div class="col">
+                <div class="section">
+                    <h1>DC</h1>
+                    <ul>
+                        <li 
+                        v-for="curLink in dcArray">
+                            {{curLink.title}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="section">
+                    <h1>SITES</h1>
+                    <ul>
+                        <li 
+                        v-for="curLink in sitesArray">
+                            {{curLink.title}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
     </div>
+</footer>
 </template>
 
 <style scoped lang="scss">
+    @use "../style/partials/mixin" as *;
+    @use "../style/partials/variables" as *;
+    
+    footer{
+        background-image: url(../assets/img/footer-bg.jpg);
+        padding: 1rem 1rem;
+        height:fit-content;
+    
+
+        .links{
+            @include flex(row, flex-start,start );
+            gap: 3rem;
+            .col{
+                @include flex(column, flex-start,start );
+                gap:0.8rem;
+                .section{
+                    @include flex(column, flex-start,start );
+                    gap:0.8rem;
+                }
+            }
+            h1{
+                color: $white;
+                font-size: 1rem;
+            }
+
+            ul{
+                @include flex(column, flex-start,start );
+                gap:0.5rem;
+                li {              
+                color: $grey;
+                font-size:0.6rem;
+                }
+            }
+            
+        }
+    }
 
 </style>

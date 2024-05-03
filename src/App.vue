@@ -1,12 +1,15 @@
 <script >
-import AppHeader from './components/AppHeader.vue'
+import AppHeader from './components/AppHeader.vue';
 import AppIcons from './components/AppIcons.vue';
-import AppMain from './components/AppMain.vue'
+import AppMain from './components/AppMain.vue';
+import AppFooter from './components/AppFooter.vue';
+
   export default {         //aggiungo
     components: {
       AppHeader,
       AppMain,
-      AppIcons
+      AppIcons,
+      AppFooter
     }
 }
 </script>
@@ -15,6 +18,7 @@ import AppMain from './components/AppMain.vue'
   <AppHeader/>
   <AppMain/>
   <AppIcons/>
+  <AppFooter/>
 </template>
 
 <style lang = "scss">    //aggiungo 
