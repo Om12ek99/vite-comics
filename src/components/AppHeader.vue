@@ -21,7 +21,7 @@
                     },
                     {
                         title:"GAMES",
-                        isActive: false,
+                        isActive: true,
                     },
                     {
                         title:"COLLECTIBLES",
@@ -58,9 +58,10 @@
                 <div class="navbar">
                     <ul>
                         <li 
-                        v-for = "(CurListItem, index) in navArray"> 
+                        v-for = "(CurListItem, index) in navArray" 
+                        :class = "{active: CurListItem.isActive}"> 
                             <a href="#">
-                            {{CurListItem}}
+                            {{CurListItem.title}}
                             </a>                    
                         </li>
                     </ul>
@@ -77,7 +78,7 @@
     .container {
         height: 100px;
         /* debug */
-        background-color: white;            /*da cambiare*/
+        background-color: $white;            /*da cambiare*/
         margin-bottom: 0;
         @include flex(row, space-between, center );
 
@@ -94,6 +95,12 @@
             gap: 2rem;
             font-size: smaller;
             margin-right: 5rem;
+
+            li {
+                &.active {
+                    color: $primary-color;
+                }
+            }
         }
     }
 </style>
