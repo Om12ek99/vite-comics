@@ -97,7 +97,7 @@ import SeriesCard from './SeriesCard.vue';
           />
         </div>
       </div>
-      <div v-if="selectedCardIndex !== null" class="overlay">
+      <div v-if="selectedCardIndex !== null" class="overlay" @click="selectedCardIndex = null">
         <div class="card-details">
           <h2>{{ seriesArray[selectedCardIndex].series }}</h2>
           <p>Price: {{ seriesArray[selectedCardIndex].price }}</p>
