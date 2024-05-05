@@ -116,7 +116,15 @@ import SeriesCard from './SeriesCard.vue';
             color: rgb(255, 255, 255);     /*da cambiare*/
             font-size: 1rem;
             margin-left: 5rem;
-            
+        }
+        .container {
+          .row {
+            @include flex(row, flex-start, center);
+            flex-wrap: wrap;
+            .col{
+              width: calc(100%/6);
+            }
+          }
         }
     }
 

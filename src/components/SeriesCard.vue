@@ -19,8 +19,12 @@
 </template>
 <style scoped lang="scss">
     .card {
+       
+        object-fit: cover;
         img{
             width: 80px;
+            height:80px;
+            
         }
         h4{
             color: aliceblue;
