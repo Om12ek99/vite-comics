@@ -79,29 +79,33 @@ import SeriesCard from './SeriesCard.vue';
                 series: "Catwoman",
                 type: "graphic novel",
             },
-          ]
+          ],
+          selectedCardIndex: null, // Indice della card selezionata
         }
     }
 }
 </script>
 
 <template>
-
-
-  
   <div class="content-section">
     <div class="container">
       <div class="row">
-        <div class="col" 
-        v-for="series in seriesArray">
+        <div class="col" v-for="(series, index) in seriesArray" :key="index" @click="selectedCardIndex = index">
           <SeriesCard 
-          :cardThumb="series.thumb"
-          :cardSeries="series.series"/>
+            :cardThumb="series.thumb"
+            :cardSeries="series.series"
+          />
+        </div>
+      </div>
+      <div v-if="selectedCardIndex !== null" class="overlay">
+        <div class="card-details">
+          <h2>{{ seriesArray[selectedCardIndex].series }}</h2>
+          <p>Price: {{ seriesArray[selectedCardIndex].price }}</p>
+          <p>Type: {{ seriesArray[selectedCardIndex].type }}</p>
         </div>
       </div>
     </div>  
   </div>
-    
 </template>
 
 <style lang = "scss"> 
@@ -117,12 +121,31 @@ import SeriesCard from './SeriesCard.vue';
             display: flex;
             flex-wrap: wrap;
             height: 100%;
+            
             .col{
               width: calc(100%/6);
               
             }
           }
         }
+        .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .card-details {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      text-align: center;
     }
+    }
+  }
 
 </style>
