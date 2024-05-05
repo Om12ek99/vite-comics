@@ -65,9 +65,8 @@
                             </a>                    
                         </li>
                     </ul>
-                </div>
-        
-        </div>
+                </div>        
+            </div>
         
     </header>
 </template>
@@ -78,7 +77,7 @@
     .container {
         height: 100px;
         /* debug */
-        background-color: $white;            /*da cambiare*/
+        background-color: $white;            
         margin-bottom: 0;
         @include flex(row, space-between, center );
 
@@ -86,15 +85,16 @@
         img {
             height: 75px;
             width: 75px;
-            margin-left: 5rem;
+            
         }
 
         /* navigation links styles */
         ul {
-            @include flex(row, space-evenly, center );
+            @include flex(row, space-evenly, center);
             gap: 2rem;
             font-size: smaller;
-            margin-right: 5rem;
+            margin-right:3rem;              /*non so perche ma non me lo ha centrato nel container*/
+           
 
             li {
                 &.active {

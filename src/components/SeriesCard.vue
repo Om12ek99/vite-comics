@@ -19,15 +19,18 @@
 </template>
 <style scoped lang="scss">
     .card {
-       
-        object-fit: cover;
+       margin-bottom: 25px;
         img{
-            width: 80px;
-            height:80px;
+            width: 150px;
+            height:150px;
+            object-fit:cover;
             
         }
         h4{
             color: aliceblue;
+            width:150px;
+            font-size: 13px;
+            margin-top:15px;
         }
     }
 </style>
