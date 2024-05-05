@@ -91,7 +91,14 @@ import SeriesCard from './SeriesCard.vue';
   
   <div class="content-section">
     <div class="container">
-      <SeriesCard :cardThumb="seriesArray[0].thumb"/>
+      <div class="row">
+        <div class="col" 
+        v-for="series in seriesArray">
+          <SeriesCard 
+          :cardThumb="series.thumb"
+          :cardSeries="series.series"/>
+        </div>
+      </div>
     </div>  
   </div>
     
