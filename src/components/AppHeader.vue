@@ -38,10 +38,16 @@
                     {
                         title:"SHOP",
                         isActive: false,
-                    },                   
+                    },                
                     
-                    
-                ]
+               ]
+            }
+        },
+        methods: {
+            toggleActive(index) {
+            this.navArray.forEach((item, i) => {
+                item.isActive = (i === index);
+                });
             }
         }
     }
@@ -59,7 +65,8 @@
                     <ul>
                         <li 
                         v-for = "(CurListItem, index) in navArray" 
-                        :class = "{active: CurListItem.isActive}"> 
+                        :class = "{active: CurListItem.isActive}"
+                        @click="toggleActive(index)"> 
                             <a href="#">
                             {{CurListItem.title}}
                             </a>                    
