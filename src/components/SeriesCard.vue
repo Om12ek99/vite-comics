@@ -24,13 +24,15 @@
             width: 150px;
             height:150px;
             object-fit:cover;
-            
-        }
+            cursor: pointer;  
+                      
+        };
+
         h4{
             color: aliceblue;
             width:150px;
             font-size: 13px;
-            margin-top:15px;
+            margin-top:15px;   
         }
     }
 </style>

@@ -110,6 +110,7 @@ import SeriesCard from './SeriesCard.vue';
 
 <style lang = "scss"> 
     @use "../style/partials/mixin" as *;
+    @use "../style/partials/variables" as *;
     .content-section {
         height: 600px;        
         /* debug */
@@ -138,12 +139,12 @@ import SeriesCard from './SeriesCard.vue';
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 
     .card-details {
-      background-color: #fff;
+      background-color: $primary-color;
       padding: 20px;
       border-radius: 5px;
-      text-align: center;
     }
     }
   }
